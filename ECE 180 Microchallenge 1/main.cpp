@@ -8,8 +8,21 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+/* A trivial C program */
+int doSomething(int anArg1) {
+    int theInt = 10;
+    
+    if(theInt == anArg1) {
+        char *theStr = (char *)malloc(100*sizeof(char));
+        strcpy(theStr, "Wow, they matched!");
+        return 10;
+    }
+    if(!theInt) {
+        return anArg1;
+    }
     return 0;
+}
+
+int main() {
+    doSomething(0);
 }
